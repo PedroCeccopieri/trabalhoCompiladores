@@ -1,0 +1,60 @@
+#include <vector>
+#include <string>
+
+std::vector<std::string> First_Block = { "do", "while", "if", "return", "break", "for", "local", "function", "name", "(" };
+std::vector<std::string> First_Stmt = { "do", "while", "if", "return", "break", "for", "function", "name", "local", "(" };
+std::vector<std::string> First_Stmt2 = { "=", ",", "in" };
+std::vector<std::string> First_Stmt3 = { "function", "name" };
+std::vector<std::string> First_Exps = { "function", "name", "not", "-", "{", "nil", "true", "false", "number", "string", "(" };
+std::vector<std::string> First_Exp = { "function", "name", "not", "-", "{", "nil", "true", "false", "number", "string", "(" };
+std::vector<std::string> First_Exp2 = { "-", "or", "and", "<", ">", "<=", ">=", "~=", "==", "..", "+", "*", "/", "^" };
+std::vector<std::string> First_PrefixExp = { "name", "(" };
+std::vector<std::string> First_PrefixExp2 = { "[" };
+std::vector<std::string> First_Field = { "name", "[" };
+std::vector<std::string> First_BinOp = { "-", "or", "and", "<", ">", "<=", ">=", "~=", "==", "..", "+", "*", "/", "^" };
+std::vector<std::string> First_Vars = { "name", "(" };
+std::vector<std::string> First_Var = { "name", "(" };
+std::vector<std::string> First_Var2 = { "[" };
+std::vector<std::string> First_Function = { "function" };
+std::vector<std::string> First_FunctionBody = { "name" };
+std::vector<std::string> First_Params = { "name" };
+std::vector<std::string> First_Names = { "name" };
+
+std::vector<std::string> Follow_Block = { "end", "elseif", "else", "EOF" };
+std::vector<std::string> Follow_Stmt = { ";" };
+std::vector<std::string> Follow_Stmt2 = { "do" };
+std::vector<std::string> Follow_Stmt3 = { ";" };
+std::vector<std::string> Follow_Exps = { ";", "do" };
+std::vector<std::string> Follow_Exp = { ";", "do", "then", ",", "-", "}", ")", "]", "or", "and", "<", ">", "<=", ">=", "~=", "==", "..", "+", "*", "/", "^" };
+std::vector<std::string> Follow_Exp2 = { ";", "do", "then", ",", "-", "}", ")", "]", "or", "and", "<", ">", "<=", ">=", "~=", "==", "..", "+", "*", "/", "^" };
+std::vector<std::string> Follow_PrefixExp = { ";", "do", "then", ",", "-", "}", ")", "]", "or", "and", "<", ">", "<=", ">=", "~=", "==", "..", "+", "*", "/", "^" };
+std::vector<std::string> Follow_PrefixExp2 = { ";", "do", "then", ",", "-", "}", ")", "[", "]", "or", "and", "<", ">", "<=", ">=", "~=", "==", "..", "+", "*", "/", "^" };
+std::vector<std::string> Follow_Field = { ",", "}" };
+std::vector<std::string> Follow_BinOp = { "funtion", "name", "not", "-", "{", "nil", "true", "false", "number", "string", "(" };
+std::vector<std::string> Follow_Vars = { "=" };
+std::vector<std::string> Follow_Var = { "=", "," };
+std::vector<std::string> Follow_Var2 = { "=", "," };
+std::vector<std::string> Follow_Function = { ";", "do", "then", ",", "-", "}", ")", "]", "or", "and", "<", ">", "<=", ">=", "~=", "==", "..", "+", "*", "/", "^" };
+std::vector<std::string> Follow_FunctionBody = { ";", "do", "then", ",", "-", "}", ")", "]", "or", "and", "<", ">", "<=", ">=", "~=", "==", "..", "+", "*", "/", "^" };
+std::vector<std::string> Follow_Params = { ")" };
+std::vector<std::string> Follow_Names = { "=", "in", ")" };
+
+int countBlock = 0;
+int countStmt = 0;
+int countStmt2 = 0;
+int countStmt3 = 0;
+int countExps = 0;
+int countExp = 0;
+int countExp2 = 0;
+int countPrefixExp = 0;
+int countPrefixExp2 = 0;
+int countField = 0;
+int countBinOp = 0;
+int countVars = 0;
+int countVar = 0;
+int countVar2 = 0;
+int countFunction = 0;
+int countFunctionBody = 0;
+int countParams = 0;
+int countNames = 0;
+int countPanic = 0;
